@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Api/" />
+  <Folder Name="/Core/">
+    <Project Path="ServeHub.Domain/ServeHub.Domain.csproj" />
+  </Folder>
+  <Folder Name="/Infrastructure/" />
+</Solution>
