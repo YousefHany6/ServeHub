@@ -10,7 +10,7 @@ namespace ServeHub.Domain.Entities
     {
         public string serviceId { get; set; }
         public Service? service { get; set; }
-
+        public decimal priceAtPurchase { get; set; }
 
         public string? orderId { get; set; }
         public Order? order { get; set; }

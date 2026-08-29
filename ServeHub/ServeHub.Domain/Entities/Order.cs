@@ -9,7 +9,7 @@ namespace ServeHub.Domain.Entities
     public class Order : BaseEntity
     {
         public SaleChannel saleChannel { get; set; }
-        public string shippingAddress { get; set; }
+        public string? shippingAddress { get; set; }
 
         public string branchId { get; set; }
         public Branch? branch { get; set; }
@@ -19,7 +19,7 @@ namespace ServeHub.Domain.Entities
 
         public string? tableId { get; set; }
         public Table? table { get; set; }
-        public string receivedByEmployeeId { get; set; }
+        public string? receivedByEmployeeId { get; set; }
         public Employee? receivedByEmployee { get; set; }
 
         public string? deliveredByEmployeeId { get; set; }
