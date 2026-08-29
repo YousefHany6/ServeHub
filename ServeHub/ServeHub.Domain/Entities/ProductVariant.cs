@@ -7,7 +7,7 @@ namespace ServeHub.Domain.Entities
 {
     public class ProductVariant : BaseEntity
     {
-        public string sku { get; set; }
+       
        
         public string productId { get; set; }
         public Product? product { get; set; }
