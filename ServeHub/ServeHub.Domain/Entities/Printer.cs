@@ -13,7 +13,7 @@ namespace ServeHub.Domain.Entities
         public int? port { get; set; }
 
         public bool isActive { get; set; } = true;
-
+        public string? sharedName { get; set; }
         public string branchId { get; set; }
         public Branch? branch { get; set; }
     }
