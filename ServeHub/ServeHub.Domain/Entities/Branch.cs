@@ -16,5 +16,6 @@ namespace ServeHub.Domain.Entities
         public ICollection<BranchProductVariant>? branchProductVariants { get; set; } = new List<BranchProductVariant>();
         public ICollection<Order>? orders { get; set; } = new List<Order>();
         public ICollection<Area>? areas { get; set; } = new List<Area>();
+        public ICollection<Printer>? printers { get; set; } = new List<Printer>();
     }
 }
