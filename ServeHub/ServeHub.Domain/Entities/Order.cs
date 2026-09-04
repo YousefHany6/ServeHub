@@ -6,31 +6,39 @@ using System.Text;
 
 namespace ServeHub.Domain.Entities
 {
+    
+
     public class Order : BaseEntity
     {
-        public SaleChannel saleChannel { get; set; }
-        public string? shippingAddress { get; set; }
+        public SaleChannel saleChannel { get;  private  set; }
+        public string? shippingAddress { get; private set; }
+        public OrderType orderType { get; private set; }
+        public string? note { get; private set; }
+        public string branchId { get; private set; }
+        public Branch? branch { get; private set; }
 
-        public string branchId { get; set; }
-        public Branch? branch { get; set; }
+        public string? customerId { get; private set; }
+        public Customer? customer { get; private set; }
 
-        public string? customerId { get; set; }
-        public Customer? customer { get; set; }
+        public string? tableId { get; private set; }
+        public Table? table { get; private set; }
+        public string? receivedByEmployeeId { get; private set; }
+        public Employee? receivedByEmployee { get; private set; }
 
-        public string? tableId { get; set; }
-        public Table? table { get; set; }
-        public string? receivedByEmployeeId { get; set; }
-        public Employee? receivedByEmployee { get; set; }
+        public string? deliveredByEmployeeId { get; private set; }
+        public Employee? deliveredByEmployee { get; private set; }
+       
+        public Invoice? invoice { get; private set; }
 
-        public string? deliveredByEmployeeId { get; set; }
-        public Employee? deliveredByEmployee { get; set; }
-        public OrderType orderType { get; set; }
+        private readonly List<OrderItem> _orderItems = new List<OrderItem>();
+        public IReadOnlyCollection<OrderItem> OrderItems => _orderItems.AsReadOnly();
 
-        public string? note { get; set; }
-        public ICollection<OrderItem>? orderItems { get; set; } = new List<OrderItem>();
+        
         public ICollection<OrderStatusHistory>? orderStatusHistories { get; set; } = new List<OrderStatusHistory>();
-        public Invoice? invoice { get; set; }
-        public ICollection<ServiceUsage>? serviceUsages { get; set; } = new List<ServiceUsage>();
+        public ICollection<ServiceUsage>? serviceUsages { get; private set; } = new List<ServiceUsage>();
+
+       
+       
 
     }
 }
