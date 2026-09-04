@@ -35,7 +35,7 @@ namespace ServeHub.Domain.Entities
         {
             if (string.IsNullOrWhiteSpace(branchName))
             {
-                throw new ArgumentException("");
+                throw new ArgumentException($"{nameof(branchName)} Can Not Be Empty");
             }
             
             this.branchName = branchName;
