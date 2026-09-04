@@ -6,7 +6,7 @@ using System.Text;
 namespace ServeHub.Domain.Entities
 {
 
-    public class Branch:BaseEntity
+    public class Branch : BaseEntity
     {
         public string branchName { get; private set; }
         public string? branchAddress { get; private set; }
@@ -26,9 +26,10 @@ namespace ServeHub.Domain.Entities
         private readonly List<Area> _areas = new();
         public IReadOnlyCollection<Area> Areas => _areas.AsReadOnly();
 
-        private readonly List<Printer> _printers= new();
+        private readonly List<Printer> _printers = new();
         public IReadOnlyCollection<Printer> Printers => _printers.AsReadOnly();
 
+        private Branch() { }
 
         // Add New Branch
         public Branch(string branchName, string branchAddress)
@@ -37,10 +38,24 @@ namespace ServeHub.Domain.Entities
             {
                 throw new ArgumentException($"{nameof(branchName)} Can Not Be Empty");
             }
-            
+
             this.branchName = branchName;
             this.branchAddress = branchAddress;
         }
+        // Update Branch
+
+        public void UpdateBranch(string branchName, string branchAddress)
+        {
+            if (string.IsNullOrWhiteSpace(branchName))
+            {
+                throw new ArgumentException($"{nameof(branchName)} Can Not Be Empty");
+            }
+            this.branchName = branchName;
+            this.branchAddress = branchAddress;
+        }
+        // Add Branch Employee
+
+       
 
     }
 }
