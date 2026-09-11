@@ -5,5 +5,7 @@
   <Folder Name="/Core/">
     <Project Path="ServeHub.Domain/ServeHub.Domain.csproj" />
   </Folder>
-  <Folder Name="/Infrastructure/" />
+  <Folder Name="/Infrastructure/">
+    <Project Path="ServeHub.Infrastructure/ServeHub.Infrastructure.csproj" Id="e0199b46-81e2-4338-afc6-3e6f2376532e" />
+  </Folder>
 </Solution>
