@@ -6,10 +6,16 @@ namespace ServeHub.Domain.Entities
 {
     public class BranchCategory
     {
-        public string branchId { get; set; }
-        public string categoryId { get; set; }
+        public string branchId { get; private set; }
+        public string categoryId { get; private set; }
 
-        public Branch? branch { get; set; }
-        public Category? category { get; set; }
+        public Branch? branch { get; private set; }
+        public Category? category { get; private set; }
+        private BranchCategory() { }
+        internal BranchCategory(string branchId, string categoryId)
+        {
+            this.branchId = branchId;
+            this.categoryId = categoryId;
+        }
     }
 }
