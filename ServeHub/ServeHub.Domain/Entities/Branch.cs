@@ -97,7 +97,7 @@ namespace ServeHub.Domain.Entities
             var branchCategory = _branchCategories.FirstOrDefault(bc => bc.categoryId == categoryId);
             if (branchCategory == null)
             {
-                throw new DomainException(DomainErrors.Branch.CategoryAlreadyAssigned);
+                throw new DomainException(DomainErrors.Branch.CategoryNotAssigned);
             }
             _branchCategories.Remove(branchCategory);
         }
@@ -120,7 +120,7 @@ namespace ServeHub.Domain.Entities
             var branchProductVariant = _branchProductVariants.FirstOrDefault(bp => bp.productVariantId == productVariantId);
             if (branchProductVariant == null)
             {
-                throw new DomainException(DomainErrors.Branch.ProductVariantAlreadyAssigned);
+                throw new DomainException(DomainErrors.Branch.ProductVariantNotAssigned);
             }
             _branchProductVariants.Remove(branchProductVariant);
         }
