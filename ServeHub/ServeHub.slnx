@@ -1,5 +1,7 @@
 <Solution>
-  <Folder Name="/Api/" />
+  <Folder Name="/Api/">
+    <Project Path="ServeHub.Api/ServeHub.Api.csproj" Id="fccc45c8-41d0-4ea8-a128-e535469a5d8b" />
+  </Folder>
   <Folder Name="/Core/">
     <Project Path="ServeHub.Domain/ServeHub.Domain.csproj" />
   </Folder>
