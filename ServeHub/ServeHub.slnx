@@ -3,6 +3,7 @@
     <Project Path="ServeHub.Api/ServeHub.Api.csproj" Id="fccc45c8-41d0-4ea8-a128-e535469a5d8b" />
   </Folder>
   <Folder Name="/Core/">
+    <Project Path="ServeHub.Application/ServeHub.Application.csproj" Id="af4d4e7d-ecef-4337-ae90-0809345c17c0" />
     <Project Path="ServeHub.Domain/ServeHub.Domain.csproj" />
   </Folder>
   <Folder Name="/Infrastructure/">
