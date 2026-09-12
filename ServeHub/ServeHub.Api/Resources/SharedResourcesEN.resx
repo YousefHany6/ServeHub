@@ -98,4 +98,42 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
+	<!-- Branch -->
+	<data name="Branch.NameCannotBeEmpty" xml:space="preserve">
+  <value>Please enter the branch name</value>
+</data>
+	<data name="Branch.EmployeeAlreadyAssigned" xml:space="preserve">
+  <value>This employee is already assigned to this branch</value>
+</data>
+	<data name="Branch.EmployeeNotAssigned" xml:space="preserve">
+  <value>This employee is not assigned to this branch</value>
+</data>
+	<data name="Branch.CategoryAlreadyAssigned" xml:space="preserve">
+  <value>This category is already added to this branch</value>
+</data>
+	<data name="Branch.CategoryNotAssigned" xml:space="preserve">
+  <value>This category is not added to this branch</value>
+</data>
+	<data name="Branch.ProductVariantAlreadyAssigned" xml:space="preserve">
+  <value>This product is already added to this branch</value>
+</data>
+	<data name="Branch.ProductVariantNotAssigned" xml:space="preserve">
+  <value>This product is not added to this branch</value>
+</data>
+	<data name="Branch.AreaAlreadyAssigned" xml:space="preserve">
+  <value>An area with this name already exists in this branch</value>
+</data>
+
+	<!-- BranchProductVariant -->
+	<data name="BranchProductVariant.PriceCanNotBeLessThanZeroOrZero" xml:space="preserve">
+  <value>Product price must be greater than zero</value>
+</data>
+
+	<!-- Area -->
+	<data name="Area.NameCannotBeEmpty" xml:space="preserve">
+  <value>Please enter the area name</value>
+</data>
+	<data name="Area.BranchIdCannotBeEmpty" xml:space="preserve">
+  <value>Please select the branch for this area</value>
+</data>
 </root>
