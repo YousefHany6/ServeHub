@@ -15,7 +15,6 @@ namespace ServeHub.Domain.Constants
             public const string CategoryNotAssigned = "Branch.CategoryNotAssigned";
             public const string ProductVariantAlreadyAssigned = "Branch.ProductVariantAlreadyAssigned";
             public const string ProductVariantNotAssigned = "Branch.ProductVariantNotAssigned";
-            public const string AreaAlreadyAssigned = "Branch.AreaAlreadyAssigned";
         }
         public static class BranchProductVariant
         {
