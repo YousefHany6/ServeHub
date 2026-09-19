@@ -13,6 +13,9 @@ namespace ServeHub.Domain.Entities
 
         public string branchId { get; private set; }
         public Branch? branch { get; private set; }
+
+        private readonly List<Table> _tables = new();
+        public IReadOnlyCollection<Table> tables  => _tables.AsReadOnly();
         private Area() { }
 
         // Add New Area
@@ -53,6 +56,6 @@ namespace ServeHub.Domain.Entities
             this.branchId = branchId;
         }
 
-        public ICollection<Table>? tables { get; set; } = new List<Table>();
+        
     }
 }

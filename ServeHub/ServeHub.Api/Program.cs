@@ -20,14 +20,23 @@ namespace ServeHub.Api
             {
                 app.MapOpenApi();
             }
-
+          
+            app.UseExceptionHandler("/error");
+            app.UseHsts();
             app.UseHttpsRedirection();
+            app.UseStaticFiles();
+            app.UseRouting();
+            app.UseCors(allow =>
+            {
+                allow.AllowAnyHeader();
+                allow.AllowAnyMethod();
+                allow.AllowAnyOrigin();
+                
 
+            });
+            app.UseAuthentication();
             app.UseAuthorization();
-
-
             app.MapControllers();
-
             app.Run();
         }
     }
