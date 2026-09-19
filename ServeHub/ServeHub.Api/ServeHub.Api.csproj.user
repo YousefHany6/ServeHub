@@ -4,10 +4,10 @@
     <ActiveDebugProfile>https</ActiveDebugProfile>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Resources\SharedResourcesAR.resx">
+    <EmbeddedResource Update="Resources\SharedResources.ar.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\SharedResourcesEN.resx">
+    <EmbeddedResource Update="Resources\SharedResources.en.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

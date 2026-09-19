@@ -1,4 +1,6 @@
 
+using ServeHub.Api.CustomMiddleWares;
+
 namespace ServeHub.Api
 {
     public class Program
@@ -13,6 +15,9 @@ namespace ServeHub.Api
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
 
+            builder.Services.AddLocalization();
+           
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -26,6 +31,12 @@ namespace ServeHub.Api
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
+            app.UseRequestLocalization(
+             new RequestLocalizationOptions().
+              SetDefaultCulture("ar").
+              AddSupportedCultures("ar", "en").
+              AddSupportedUICultures("ar", "en")
+           );
             app.UseCors(allow =>
             {
                 allow.AllowAnyHeader();
@@ -36,7 +47,9 @@ namespace ServeHub.Api
             });
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseDomainExceptionMiddleware();
             app.MapControllers();
+       
             app.Run();
         }
     }

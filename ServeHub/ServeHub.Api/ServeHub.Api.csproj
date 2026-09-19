@@ -16,7 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resources\SharedResourcesAR.resx">
+    <ProjectReference Include="..\ServeHub.Domain\ServeHub.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\SharedResources.ar.resx">
       <Generator></Generator>
     </EmbeddedResource>
   </ItemGroup>
