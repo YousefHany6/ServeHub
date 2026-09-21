@@ -7,12 +7,16 @@ namespace ServeHub.Domain.Entities
 {
     public class Table : BaseEntity
     {
-        public string name { get; set; } 
+        public string name { get; private set; } 
         
-        public Guid areaId { get; set; }
-        public Area? area { get; set; }
+        public Guid areaId { get; private set; }
+        public Area? area { get; private set; }
 
+        private Table()
+        { }
+
+        private readonly List<Order> _orders = new List<Order>();
+        public IReadOnlyCollection<Order> Orders => _orders.AsReadOnly();
         
-        public ICollection<Order>? orders { get; set; } = new List<Order>();
     }
 }

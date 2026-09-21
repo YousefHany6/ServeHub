@@ -8,25 +8,28 @@ namespace ServeHub.Domain.Entities
 {
     public class Discount : BaseEntity
     {
-        public string name { get; set; }
-        public DiscountType discountType { get; set; }
-        public DiscountScope discountScope { get; set; }
-        public string? promoCode { get; set; }
+        public string name { get; private set; }
+        public DiscountType discountType { get; private set; }
+        public DiscountScope discountScope { get; private set; }
+        public string? promoCode { get; private set; }
 
         
-        public decimal? percentage { get; set; }
-        public decimal? amount { get; set; }
+        public decimal? percentage { get; private set; }
+        public decimal? amount { get; private set; }
 
-        public DateOnly startDate { get; set; }
-        public DateOnly endDate { get; set; }
-        public bool isActive { get; set; } = true;
+        public DateOnly startDate { get; private set; }
+        public DateOnly endDate { get; private set; }
+        public bool isActive { get; private set; } = true;
 
         
-        public Guid? categoryId { get; set; }
-        public Category? category { get; set; }
+        public Guid? categoryId { get; private set; }
+        public Category? category { get; private set; }
 
-        public Guid? productId { get; set; }
-        public Product? product { get; set; }
-    }
+        public Guid? productId { get; private set; }
+        public Product? product { get; private set; }
+
+        private Discount()
+        { }
+        }
 }
 

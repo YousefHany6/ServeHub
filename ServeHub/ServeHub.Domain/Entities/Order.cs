@@ -33,12 +33,13 @@ namespace ServeHub.Domain.Entities
         private readonly List<OrderItem> _orderItems = new List<OrderItem>();
         public IReadOnlyCollection<OrderItem> OrderItems => _orderItems.AsReadOnly();
 
+        private readonly List<OrderStatusHistory> _orderStatusHistories = new List<OrderStatusHistory>();
+        public IReadOnlyCollection<OrderStatusHistory> OrderStatusHistories => _orderStatusHistories.AsReadOnly();
         
-        public ICollection<OrderStatusHistory>? orderStatusHistories { get; set; } = new List<OrderStatusHistory>();
-        public ICollection<ServiceUsage>? serviceUsages { get; private set; } = new List<ServiceUsage>();
+        private readonly List<ServiceUsage> _serviceUsages = new List<ServiceUsage>();
+        public IReadOnlyCollection<ServiceUsage> ServiceUsages => _serviceUsages.AsReadOnly();
 
-       
-       
 
+        private Order() { }
     }
 }

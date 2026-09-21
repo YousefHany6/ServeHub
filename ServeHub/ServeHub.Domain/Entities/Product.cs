@@ -7,19 +7,27 @@ namespace ServeHub.Domain.Entities
 {
     public class Product : BaseEntity
     {
-        public string name { get; set; }
-        public string? description { get; set; }
-        public bool isActive { get; set; } = true;
+        public string name { get; private set; }
+        public string? description { get; private set; }
+        public bool isActive { get; private set; } = true;
 
-        public Guid categoryId { get; set; }
-        public Category? category { get; set; }
+        public Guid categoryId { get; private set; }
+        public Category? category { get; private set; }
 
-        public ICollection<ProductVariant>? productVariants { get; set; } = new List<ProductVariant>();
-        public ICollection<ProductOptionType>? productOptionTypes { get; set; } = new List<ProductOptionType>();
-        public ICollection<Discount>? discounts { get; set; } = new List<Discount>();
-        public ICollection<ProductMedia>? productMedias { get; set; } = new List<ProductMedia>();
+        private Product() { }
 
-        public Guid recordedByEmployeeId { get; set; }
-        public Employee? recordedByEmployee { get; set; }
+        private readonly List<ProductVariant> _productVariants = new List<ProductVariant>();
+        public IReadOnlyCollection<ProductVariant> productVariants => _productVariants.AsReadOnly();
+
+        private readonly List<ProductOptionType> _productOptionTypes = new List<ProductOptionType>();
+        public IReadOnlyCollection<ProductOptionType> productOptionTypes => _productOptionTypes.AsReadOnly();
+        private readonly List<Discount> _discounts = new List<Discount>();
+        public IReadOnlyCollection<Discount> discounts => _discounts.AsReadOnly();
+
+        private readonly List<ProductMedia> _productMedias = new List<ProductMedia>();
+        public IReadOnlyCollection<ProductMedia> productMedias => _productMedias.AsReadOnly();
+
+        public Guid recordedByEmployeeId { get; private set; }
+        public Employee? recordedByEmployee { get; private set; }
     }
 }

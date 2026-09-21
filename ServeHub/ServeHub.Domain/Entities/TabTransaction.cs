@@ -8,16 +8,19 @@ namespace ServeHub.Domain.Entities
 {
     public class TabTransaction : BaseEntity
     {
-        public Guid customerTabId { get; set; }
-        public CustomerTab? customerTab { get; set; }
+        public Guid customerTabId { get; private set; }
+        public CustomerTab? customerTab { get; private set; }
 
-        public TabTransactionType tabTransactionType { get; set; }
-        public decimal amount { get; set; }
+        public TabTransactionType tabTransactionType { get; private set; }
+        public decimal amount { get; private set; }
 
-        public Guid? orderId { get; set; }             
-        public Order? order { get; set; }
+        public Guid? orderId { get; private set; }             
+        public Order? order { get; private set; }
 
-        public string? note { get; set; }
-        public string? recordedByEmployeeId { get; set; } 
+        public string? note { get; private set; }
+        public string? recordedByEmployeeId { get; private set; } 
+
+        private TabTransaction()
+        { }
     }
 }

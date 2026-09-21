@@ -9,17 +9,17 @@ namespace ServeHub.Domain.Entities
 {
     public class StaffTransaction:BaseEntity
     {
-        public TransactionType transactionType { get; set; }
-        public decimal amount { get; set; }
-        public TransactionStatus transactionStatus { get; set; }
-         public string? Note { get; set; }
+        public TransactionType transactionType { get; private set; }
+        public decimal amount { get; private set; }
+        public TransactionStatus transactionStatus { get; private set; }
+         public string? Note { get; private set; }
 
         
-        public Guid employeeId { get; set; }
-        public Employee? employee { get; set; }
+        public Guid employeeId { get; private set; }
+        public Employee? employee { get; private set; }
 
         
-        public Guid recordedByEmployeeId { get; set; }
-        public Employee? recordedByEmployee { get; set; }
+        public Guid recordedByEmployeeId { get; private set; }
+        public Employee? recordedByEmployee { get; private set; }
     }
 }

@@ -9,11 +9,14 @@ namespace ServeHub.Domain.Entities
 {
     public class SalaryConfig:BaseEntity
     {
-        public decimal baseAmount { get; set; }
-        public SalaryType salaryType { get; set; }
+        public decimal baseAmount { get; private set; }
+        public SalaryType salaryType { get; private set; }
 
         
-        public Employee? employee { get; set; }
-        public Guid employeeId { get; set; }
+        public Employee? employee { get; private set; }
+        public Guid employeeId { get; private set; }
+
+        private SalaryConfig()
+        { }
     }
 }

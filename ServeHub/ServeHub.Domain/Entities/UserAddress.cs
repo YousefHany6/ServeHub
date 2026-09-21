@@ -7,9 +7,12 @@ namespace ServeHub.Domain.Entities
 {
     public class UserAddress : BaseEntity
     {
-        public string address { get; set; }
+        public string address { get; private set; }
       
-        public Guid userId { get; set; }
-       
+        public Guid userId { get; private set; }
+
+        private UserAddress()
+        { }
+
     }
 }

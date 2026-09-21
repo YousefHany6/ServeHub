@@ -8,14 +8,14 @@ namespace ServeHub.Domain.Entities
 {
     public class WorkLog:BaseEntity
     {
-        public WorkLogStatus workLogStatus { get; set; }
+        public WorkLogStatus workLogStatus { get; private set; }
 
-        public Guid employeeId { get; set; }
-        public Employee? employee { get; set; }
+        public Guid employeeId { get; private set; }
+        public Employee? employee { get; private set; }
 
 
-        public Guid recordedByEmployeeId { get; set; }
-        public Employee? recordedByEmployee { get; set; }
+        public Guid recordedByEmployeeId { get; private set; }
+        public Employee? recordedByEmployee { get; private set; }
 
     }
 }

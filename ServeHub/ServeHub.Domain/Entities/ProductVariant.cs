@@ -7,14 +7,23 @@ namespace ServeHub.Domain.Entities
 {
     public class ProductVariant : BaseEntity
     {
-       
-       
-        public Guid productId { get; set; }
-        public Product? product { get; set; }
+        public Guid productId { get; private set; }
+        public Product? product { get; private set; }
+        private readonly List<ProductVariantOptionValue> _productVariantOptionValues = new List<ProductVariantOptionValue>();
+        public IReadOnlyCollection<ProductVariantOptionValue> ProductVariantOptionValues => _productVariantOptionValues.AsReadOnly();
 
-        public ICollection<ProductVariantOptionValue>? productVariantOptionValues { get; set; } = new List<ProductVariantOptionValue>();
-        public ICollection<CartItem>? cartItems { get; set; } = new List<CartItem>();
-        public ICollection<OrderItem>? orderItems { get; set; } = new List<OrderItem>();
-        public ICollection<BranchProductVariant>? branchProductVariants { get; set; } = new List<BranchProductVariant>();
+         private readonly List<CartItem> _cartItems = new List<CartItem>();
+        public IReadOnlyCollection<CartItem> CartItems => _cartItems.AsReadOnly();
+
+        private readonly List<OrderItem> _orderItems = new List<OrderItem>();
+
+        public IReadOnlyCollection<OrderItem> OrderItems => _orderItems.AsReadOnly();
+      
+        private readonly List<BranchProductVariant> _branchProductVariants = new List<BranchProductVariant>();
+
+        public IReadOnlyCollection<BranchProductVariant> BranchProductVariants => _branchProductVariants.AsReadOnly();
+
+        private ProductVariant() { }
+
     }
 }

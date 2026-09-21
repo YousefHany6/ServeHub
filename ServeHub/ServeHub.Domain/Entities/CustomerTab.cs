@@ -9,12 +9,14 @@ namespace ServeHub.Domain.Entities
     public class CustomerTab : BaseEntity
     {
        
-        public string tabName { get; set; }   
-        public string? phone { get; set; }    
+        public string tabName { get; private set; }   
+        public string? phone { get; private set; }    
 
-        public TabStatus tabStatus { get; set; } = TabStatus.Active;
-        public decimal? creditLimit { get; set; } 
-
-        public ICollection<TabTransaction>? tabTransactions { get; set; } = new List<TabTransaction>();
+        public TabStatus tabStatus { get; private set; } = TabStatus.Active;
+        public decimal? creditLimit { get; private set; } 
+        private CustomerTab() { }
+        private readonly List<TabTransaction> _tabTransactions = new();
+        public IReadOnlyCollection<TabTransaction> tabTransactions => _tabTransactions.AsReadOnly();
+        //public ICollection<TabTransaction>? tabTransactions { get; private set; } = new List<TabTransaction>();
     }
 }

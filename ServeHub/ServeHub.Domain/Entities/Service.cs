@@ -8,14 +8,18 @@ namespace ServeHub.Domain.Entities
 {
     public class Service : BaseEntity
     {
-        public string name { get; set; } 
-        public ServicePricingType pricingType { get; set; }
-        public decimal price { get; set; } 
-        public bool isActive { get; set; } = true;
+        public string name { get; private set; } 
+        public ServicePricingType pricingType { get; private set; }
+        public decimal price { get; private set; } 
+        public bool isActive { get; private set; } = true;
 
-        public Guid branchId { get; set; }
-        public Branch? branch { get; set; }
+        public Guid branchId { get; private set; }
+        public Branch? branch { get; private set; }
+        private Service()
+        { }
 
-        public ICollection<ServiceUsage>? serviceUsages { get; set; } = new List<ServiceUsage>();
+        private readonly List<ServiceUsage> _serviceUsages = new List<ServiceUsage>();
+        public IReadOnlyCollection<ServiceUsage> serviceUsages => _serviceUsages.AsReadOnly();
+        
     }
 }

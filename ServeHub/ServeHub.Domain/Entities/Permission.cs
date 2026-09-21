@@ -7,7 +7,10 @@ namespace ServeHub.Domain.Entities
 {
     public class Permission: BaseEntity
     {
-        public string permissionName { get; set; }
+        public string permissionName { get; private set; }
+
+        private Permission()
+        { }
 
     }
 }

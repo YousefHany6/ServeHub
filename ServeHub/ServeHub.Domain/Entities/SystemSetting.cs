@@ -7,9 +7,9 @@ namespace ServeHub.Domain.Entities
 {
     public class SystemSetting:BaseEntity
     {
-        public string arabicName { get; set; }
-        public string SettingKey { get; set; }
-        public string SettingValue { get; set; }
+        public string arabicName { get; private set; }
+        public string SettingKey { get; private set; }
+        public string SettingValue { get; private set; }
 
     }
 }

@@ -7,11 +7,16 @@ namespace ServeHub.Domain.Entities
 {
     public class ProductOptionValue : BaseEntity
     {
-        public string value { get; set; } 
+        public string value { get; private set; } 
 
-        public Guid productOptionTypeId { get; set; }
-        public ProductOptionType? productOptionType { get; set; }
+        public Guid productOptionTypeId { get; private set; }
+        public ProductOptionType? productOptionType { get; private set; }
 
-        public ICollection<ProductVariantOptionValue>? productVariantOptionValues { get; set; } = new List<ProductVariantOptionValue>();
-    }
+        private readonly List<ProductVariantOptionValue> _productVariantOptionValues = new List<ProductVariantOptionValue>();
+
+        public IReadOnlyCollection<ProductVariantOptionValue> ProductVariantOptionValues => _productVariantOptionValues.AsReadOnly();
+
+        private ProductOptionValue()
+        { }
+        }
 }
