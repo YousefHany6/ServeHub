@@ -16,7 +16,6 @@ namespace ServeHub.Api
             builder.Services.AddOpenApi();
 
             builder.Services.AddLocalization();
-           
 
             var app = builder.Build();
 
