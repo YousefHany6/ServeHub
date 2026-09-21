@@ -13,7 +13,7 @@ namespace ServeHub.Domain.Entities
         public bool isActive { get; set; } = true;
 
         
-        public string? parentCategoryId { get; set; }
+        public Guid? parentCategoryId { get; set; }
         public Category? parentCategory { get; set; }
         public ICollection<Category>? subCategories { get; set; } = new List<Category>();
 

@@ -8,8 +8,8 @@ namespace ServeHub.Domain.Entities
 {
     public class BranchProductVariant
     {
-        public string branchId { get; private set; }
-        public string productVariantId { get; private set; }
+        public Guid branchId { get; private set; }
+        public Guid productVariantId { get; private set; }
 
        public bool isAvailable { get; private set; } 
         public decimal price { get; private set; }
@@ -18,7 +18,7 @@ namespace ServeHub.Domain.Entities
         public Branch? branch { get; private set; }
         public ProductVariant? productVariant { get; private set; }
         private BranchProductVariant() { }
-        internal BranchProductVariant(string branchId, string productVariantId, bool isAvailable, decimal price)
+        internal BranchProductVariant(Guid branchId, Guid productVariantId, bool isAvailable, decimal price)
         {
             if (price <= 0)
             {

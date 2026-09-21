@@ -8,7 +8,7 @@ namespace ServeHub.Domain.Entities
 {
     public class CashMovement : BaseEntity
     {
-        public string cashShiftId { get; set; }
+        public Guid cashShiftId { get; set; }
         public CashShift? cashShift { get; set; }
 
         public CashMovementDirection direction { get; set; }
@@ -17,9 +17,9 @@ namespace ServeHub.Domain.Entities
 
         public string reason { get; set; }                      
 
-        public string? invoiceId { get; set; }               
+        public Guid? invoiceId { get; set; }               
         public Invoice? invoice { get; set; }
-        public string recordedByEmployeeId { get; set; }       
+        public Guid recordedByEmployeeId { get; set; }       
         public Employee? recordedByEmployee { get; set; }
     }
 }

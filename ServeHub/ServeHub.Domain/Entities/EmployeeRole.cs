@@ -9,7 +9,7 @@ namespace ServeHub.Domain.Entities
         public Role Role { get; set; }
         public Employee employee { get; set; }
 
-        public string roleId { get; set; }
-        public string employeeId { get; set; }
+        public Guid roleId { get; set; }
+        public Guid employeeId { get; set; }
     }
 }

@@ -7,7 +7,7 @@ namespace ServeHub.Domain.Entities
 {
     public class Cart: BaseEntity
     {
-        public string customerId { get; set; }
+        public Guid customerId { get; set; }
         public Customer? customer { get; set; }
 
         public ICollection<CartItem>? cartItems { get; set; } = new List<CartItem>();

@@ -14,18 +14,18 @@ namespace ServeHub.Domain.Entities
         public string? shippingAddress { get; private set; }
         public OrderType orderType { get; private set; }
         public string? note { get; private set; }
-        public string branchId { get; private set; }
+        public Guid branchId { get; private set; }
         public Branch? branch { get; private set; }
 
-        public string? customerId { get; private set; }
+        public Guid? customerId { get; private set; }
         public Customer? customer { get; private set; }
 
-        public string? tableId { get; private set; }
+        public Guid? tableId { get; private set; }
         public Table? table { get; private set; }
-        public string? receivedByEmployeeId { get; private set; }
+        public Guid? receivedByEmployeeId { get; private set; }
         public Employee? receivedByEmployee { get; private set; }
 
-        public string? deliveredByEmployeeId { get; private set; }
+        public Guid? deliveredByEmployeeId { get; private set; }
         public Employee? deliveredByEmployee { get; private set; }
        
         public Invoice? invoice { get; private set; }

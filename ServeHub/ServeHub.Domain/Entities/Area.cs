@@ -11,7 +11,7 @@ namespace ServeHub.Domain.Entities
     {
         public string name { get; private set; } 
 
-        public string branchId { get; private set; }
+        public Guid branchId { get; private set; }
         public Branch? branch { get; private set; }
 
         private readonly List<Table> _tables = new();
@@ -20,17 +20,17 @@ namespace ServeHub.Domain.Entities
 
         // Add New Area
 
-        public Area(string name, string branchId)
+        public Area(string name, Guid branchId)
         {
             SetName(name);
             SetBranchId(branchId);
         }
 
         // Update Area Name Or BranchId
-        public void Update(string name, string branchId)
+        public void Update(string name, Guid branchId)
         {
             SetName(name);
-            if (!string.IsNullOrWhiteSpace(branchId))
+            if (!string.IsNullOrWhiteSpace(branchId.ToString()))
             {
                 SetBranchId(branchId);
             }
@@ -47,9 +47,9 @@ namespace ServeHub.Domain.Entities
         }
 
         // set branchId
-        private void SetBranchId(string branchId)
+        private void SetBranchId(Guid branchId)
         {
-            if (string.IsNullOrWhiteSpace(branchId))
+            if (string.IsNullOrWhiteSpace(branchId.ToString()))
             {
                 throw new DomainException(DomainErrors.Area.BranchIdCannotBeEmpty);
             }

@@ -22,10 +22,10 @@ namespace ServeHub.Domain.Entities
         public bool isActive { get; set; } = true;
 
         
-        public string? categoryId { get; set; }
+        public Guid? categoryId { get; set; }
         public Category? category { get; set; }
 
-        public string? productId { get; set; }
+        public Guid? productId { get; set; }
         public Product? product { get; set; }
     }
 }

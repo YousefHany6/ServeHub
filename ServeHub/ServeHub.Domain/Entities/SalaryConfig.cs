@@ -14,6 +14,6 @@ namespace ServeHub.Domain.Entities
 
         
         public Employee? employee { get; set; }
-        public string employeeId { get; set; }
+        public Guid employeeId { get; set; }
     }
 }

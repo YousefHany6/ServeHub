@@ -6,8 +6,8 @@ namespace ServeHub.Domain.Entities
 {
     public class ProductVariantOptionValue
     {
-        public string productVariantId { get; set; }
-        public string productOptionValueId { get; set; }
+        public Guid productVariantId { get; set; }
+        public Guid productOptionValueId { get; set; }
 
         public ProductVariant? productVariant { get; set; }
         public ProductOptionValue? productOptionValue { get; set; }

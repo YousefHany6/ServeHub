@@ -11,7 +11,7 @@ namespace ServeHub.Domain.Entities
         public string? description { get; set; }
         public bool isActive { get; set; } = true;
 
-        public string categoryId { get; set; }
+        public Guid categoryId { get; set; }
         public Category? category { get; set; }
 
         public ICollection<ProductVariant>? productVariants { get; set; } = new List<ProductVariant>();
@@ -19,7 +19,7 @@ namespace ServeHub.Domain.Entities
         public ICollection<Discount>? discounts { get; set; } = new List<Discount>();
         public ICollection<ProductMedia>? productMedias { get; set; } = new List<ProductMedia>();
 
-        public string recordedByEmployeeId { get; set; }
+        public Guid recordedByEmployeeId { get; set; }
         public Employee? recordedByEmployee { get; set; }
     }
 }

@@ -15,11 +15,11 @@ namespace ServeHub.Domain.Entities
          public string? Note { get; set; }
 
         
-        public string employeeId { get; set; }
+        public Guid employeeId { get; set; }
         public Employee? employee { get; set; }
 
         
-        public string recordedByEmployeeId { get; set; }
+        public Guid recordedByEmployeeId { get; set; }
         public Employee? recordedByEmployee { get; set; }
     }
 }

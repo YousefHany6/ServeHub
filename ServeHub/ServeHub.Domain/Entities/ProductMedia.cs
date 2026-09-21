@@ -9,7 +9,7 @@ namespace ServeHub.Domain.Entities
     {
         public string mediaUrl { get; set; }
 
-        public string productId { get; set; }
+        public Guid productId { get; set; }
         public Product? product { get; set; }
     }
 }

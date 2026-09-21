@@ -9,7 +9,7 @@ namespace ServeHub.Domain.Entities
     {
         public int quantity { get; set; }
 
-        public string cartId { get; set; }
+        public Guid cartId { get; set; }
         public Cart? cart { get; set; }
 
         public string productVariantId { get; set; }

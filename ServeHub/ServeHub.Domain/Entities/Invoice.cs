@@ -18,7 +18,7 @@ namespace ServeHub.Domain.Entities
         public string? gatewayTransactionId { get; set; }
 
        
-        public string orderId { get; set; }
+        public Guid orderId { get; set; }
         public Order? order { get; set; }
     }
 }

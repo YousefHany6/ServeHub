@@ -8,13 +8,13 @@ namespace ServeHub.Domain.Entities
 {
     public class CashShift : BaseEntity
     {
-        public string branchId { get; set; }
+        public Guid branchId { get; set; }
         public Branch? branch { get; set; }
 
-        public string openedByEmployeeId { get; set; }    
+        public Guid openedByEmployeeId { get; set; }    
         public Employee? openedByEmployee { get; set; }
 
-        public string? closedByEmployeeId { get; set; }
+        public Guid? closedByEmployeeId { get; set; }
 
         public DateTimeOffset openedAt { get; set; } = DateTimeOffset.UtcNow;
         public DateTimeOffset? closedAt { get; set; }

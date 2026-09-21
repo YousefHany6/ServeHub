@@ -10,7 +10,7 @@ namespace ServeHub.Domain.Entities
     {
         public EmpStatus empStatus { get; set; } = EmpStatus.Active;
         
-        public string userId { get; set; }
+        public Guid userId { get; set; }
 
         public ICollection<SalaryConfig>? salaryConfig { get; set; } = new List<SalaryConfig>();
         public ICollection<StaffTransaction>? staffTransactions { get; set; } = new List<StaffTransaction>();

@@ -8,7 +8,7 @@ namespace ServeHub.Domain.Entities.Common
     public abstract class BaseEntity
     {
         [Key]
-        public string Id { get; private set; } = Guid.NewGuid().ToString();
+        public Guid Id { get; private set; } = Guid.CreateVersion7();
 
         public DateTimeOffset CreatedAt { get;  private set; } = DateTimeOffset.UtcNow;
 

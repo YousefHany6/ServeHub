@@ -9,7 +9,7 @@ namespace ServeHub.Domain.Entities
     {
         public string address { get; set; }
       
-        public string userId { get; set; }
+        public Guid userId { get; set; }
        
     }
 }

@@ -9,7 +9,7 @@ namespace ServeHub.Domain.Entities
     {
         public string name { get; set; } 
 
-        public string productId { get; set; }
+        public Guid productId { get; set; }
         public Product? product { get; set; }
 
         public ICollection<ProductOptionValue>? productOptionValues { get; set; } = new List<ProductOptionValue>();

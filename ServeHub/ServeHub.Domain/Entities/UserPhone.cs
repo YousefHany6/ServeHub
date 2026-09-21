@@ -10,7 +10,7 @@ namespace ServeHub.Domain.Entities
         public string phone { get; set; }
         public bool isPrimary { get; set; } 
 
-        public string userId { get; set; }
+        public Guid userId { get; set; }
        
     }
 }

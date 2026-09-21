@@ -8,7 +8,7 @@ namespace ServeHub.Domain.Entities
 {
     public class Customer :BaseEntity
     {
-        public string userId { get; set; }
+        public Guid userId { get; set; }
         public AccStatus accStatus { get; set; }
         public Cart? cart { get; set; }
         public ICollection<Order>? orders { get; set; } = new List<Order>();
