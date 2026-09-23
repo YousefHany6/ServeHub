@@ -1,8 +1,5 @@
 ﻿using ServeHub.Domain.Entities.Common;
 using ServeHub.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ServeHub.Domain.Entities
 {
@@ -17,6 +14,5 @@ namespace ServeHub.Domain.Entities
         private CustomerTab() { }
         private readonly List<TabTransaction> _tabTransactions = new();
         public IReadOnlyCollection<TabTransaction> tabTransactions => _tabTransactions.AsReadOnly();
-        //public ICollection<TabTransaction>? tabTransactions { get; private set; } = new List<TabTransaction>();
     }
 }

@@ -1,9 +1,6 @@
 ﻿using ServeHub.Domain.Constants;
 using ServeHub.Domain.Entities.Common;
 using ServeHub.Domain.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ServeHub.Domain.Entities
 {

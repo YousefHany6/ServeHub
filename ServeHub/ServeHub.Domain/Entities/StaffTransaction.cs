@@ -1,9 +1,5 @@
 ﻿using ServeHub.Domain.Entities.Common;
 using ServeHub.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
 namespace ServeHub.Domain.Entities
 {

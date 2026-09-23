@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ServeHub.Domain.Entities
+﻿namespace ServeHub.Domain.Entities
 {
     public class ProductVariantOptionValue
     {
