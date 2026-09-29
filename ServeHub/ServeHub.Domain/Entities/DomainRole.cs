@@ -2,10 +2,10 @@
 
 namespace ServeHub.Domain.Entities
 {
-    public class Role:BaseEntity
+    public class DomainRole:BaseEntity
     {
         public string roleName { get; private set; }
-        private Role()
+        private DomainRole()
         { }
 
         private readonly List<EmployeeRole> _employeeRoles = new List<EmployeeRole>();

@@ -2,7 +2,7 @@
 {
     public class RolePermission
     {
-        public Role role { get; private set; }
+        public DomainRole role { get; private set; }
         public Permission permission { get; private set; }
 
         public Guid roleId { get; private set; }

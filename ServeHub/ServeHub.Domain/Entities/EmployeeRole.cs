@@ -2,7 +2,7 @@
 {
     public class EmployeeRole
     {
-        public Role Role { get; private set; }
+        public DomainRole Role { get; private set; }
         public Employee employee { get; private set; }
 
         public Guid roleId { get; private set; }
