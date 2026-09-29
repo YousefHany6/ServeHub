@@ -15,7 +15,7 @@ namespace ServeHub.Domain.Entities
         public Order? order { get; private set; }
 
         public string? note { get; private set; }
-        public string? recordedByEmployeeId { get; private set; } 
+        public Guid? recordedByEmployeeId { get; private set; } 
 
         private TabTransaction()
         { }

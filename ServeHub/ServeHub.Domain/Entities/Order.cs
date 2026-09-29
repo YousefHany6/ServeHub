@@ -10,13 +10,13 @@ namespace ServeHub.Domain.Entities
         public SaleChannel saleChannel { get;  private  set; }
         public string? shippingAddress { get; private set; }
         public OrderType orderType { get; private set; }
-        public string? note { get; private set; }
         public Guid branchId { get; private set; }
         public Branch? branch { get; private set; }
-
+        public OrderStatus orderStatus { get; private set; } = OrderStatus.Pending;
         public Guid? customerId { get; private set; }
         public Customer? customer { get; private set; }
-
+        public int orderNumber { get; private set; }
+        public DateOnly orderDate { get; private set; } = DateOnly.FromDateTime(DateTime.UtcNow);
         public Guid? tableId { get; private set; }
         public Table? table { get; private set; }
         public Guid? receivedByEmployeeId { get; private set; }

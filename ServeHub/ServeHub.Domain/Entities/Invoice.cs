@@ -14,7 +14,8 @@ namespace ServeHub.Domain.Entities
         public PaymentStatus paymentStatus { get; private set; }
         public string? gatewayTransactionId { get; private set; }
 
-       
+       public int invoiceNumber { get; private set; }
+        public DateOnly invoiceDate { get; private set; } = DateOnly.FromDateTime(DateTime.UtcNow);
         public Guid orderId { get; private set; }
         public Order? order { get; private set; }
 

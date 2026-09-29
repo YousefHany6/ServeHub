@@ -12,7 +12,7 @@ namespace ServeHub.Domain.Entities
 
         public Guid? productVariantId { get;private set; }
         public ProductVariant? productVariant { get;private set; }
-
+        public string? notes { get; private set; }
         private OrderItem() { }
     }
 }
