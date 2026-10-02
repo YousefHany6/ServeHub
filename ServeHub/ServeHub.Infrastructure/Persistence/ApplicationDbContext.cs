@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ServeHub.Domain.Entities;
 using ServeHub.Domain.Enums;
@@ -56,8 +57,14 @@ namespace ServeHub.Infrastructure.Persistence
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<ApplicationUser>().Ignore(u => u.PhoneNumber);
+            builder.Entity<ApplicationUser>().Ignore(u => u.PhoneNumberConfirmed);
+
             base.OnModelCreating(builder);
+         
             builder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+            builder.Ignore<IdentityUserLogin<Guid>>();
+            builder.Ignore<IdentityRoleClaim<Guid>>();
         }
 
         protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
