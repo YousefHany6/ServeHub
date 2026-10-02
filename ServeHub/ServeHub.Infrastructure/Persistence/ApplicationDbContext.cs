@@ -74,6 +74,7 @@ namespace ServeHub.Infrastructure.Persistence
             }
 
             configurationBuilder.Properties<decimal>().HavePrecision(18, 2);
+            configurationBuilder.Properties<string>().HaveMaxLength(200);
         }
     }
 }

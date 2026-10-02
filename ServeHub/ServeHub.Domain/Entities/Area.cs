@@ -27,7 +27,7 @@ namespace ServeHub.Domain.Entities
         public void Update(string name, Guid branchId)
         {
             SetName(name);
-            if (!string.IsNullOrWhiteSpace(branchId.ToString()))
+            if (branchId==Guid.Empty)
             {
                 SetBranchId(branchId);
             }
@@ -46,7 +46,7 @@ namespace ServeHub.Domain.Entities
         // set branchId
         private void SetBranchId(Guid branchId)
         {
-            if (string.IsNullOrWhiteSpace(branchId.ToString()))
+            if (branchId==Guid.Empty)
             {
                 throw new DomainException(DomainErrors.Area.BranchIdCannotBeEmpty);
             }

@@ -25,8 +25,4 @@
     <ProjectReference Include="..\ServeHub.Application\ServeHub.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Persistence\Configurations\" />
-  </ItemGroup>
-
 </Project>
