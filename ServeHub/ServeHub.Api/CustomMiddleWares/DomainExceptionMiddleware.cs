@@ -1,9 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Localization;
+﻿using Microsoft.Extensions.Localization;
 using ServeHub.Api.Resources;
 using ServeHub.Domain.Exceptions;
-using System.Threading.Tasks;
 
 namespace ServeHub.Api.CustomMiddleWares
 {

@@ -8,7 +8,7 @@ namespace ServeHub.Domain.Entities
         public Guid branchId { get; private set; }
         public Guid productVariantId { get; private set; }
 
-       public bool isAvailable { get; private set; } 
+        public bool isAvailable { get; private set; } 
         public decimal price { get; private set; }
 
 

@@ -27,10 +27,9 @@ namespace ServeHub.Domain.Entities
         public void Update(string name, Guid branchId)
         {
             SetName(name);
-            if (branchId==Guid.Empty)
-            {
-                SetBranchId(branchId);
-            }
+          
+            SetBranchId(branchId);
+            
         }
 
         //set name

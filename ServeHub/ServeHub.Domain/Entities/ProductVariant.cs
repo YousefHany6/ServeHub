@@ -6,6 +6,7 @@ namespace ServeHub.Domain.Entities
     {
         public Guid productId { get; private set; }
         public Product? product { get; private set; }
+
         private readonly List<ProductVariantOptionValue> _productVariantOptionValues = new List<ProductVariantOptionValue>();
         public IReadOnlyCollection<ProductVariantOptionValue> ProductVariantOptionValues => _productVariantOptionValues.AsReadOnly();
 

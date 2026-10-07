@@ -10,7 +10,8 @@ namespace ServeHub.Domain.Entities
 
         public Guid categoryId { get; private set; }
         public Category? category { get; private set; }
-
+        public Guid recordedByEmployeeId { get; private set; }
+        public Employee? recordedByEmployee { get; private set; }
         private Product() { }
 
         private readonly List<ProductVariant> _productVariants = new List<ProductVariant>();
@@ -24,7 +25,6 @@ namespace ServeHub.Domain.Entities
         private readonly List<ProductMedia> _productMedias = new List<ProductMedia>();
         public IReadOnlyCollection<ProductMedia> productMedias => _productMedias.AsReadOnly();
 
-        public Guid recordedByEmployeeId { get; private set; }
-        public Employee? recordedByEmployee { get; private set; }
+
     }
 }
